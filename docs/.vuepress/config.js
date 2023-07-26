@@ -1,9 +1,15 @@
 module.exports = {
     title: 'firefly-g 的博客',
-    description: 'take our time,step by step',
+    description: 'firefly-g学习笔记',
     // them:'reco',
     base:'/vuepress-note/',
+	shouldPrefetch: () => false,
     themeConfig: {
+		repo: '/firefly-g/vuepress-note',	
+		repoLabel: 'Github',
+		docsDir: 'docs',
+		docsBranch: 'dev',	
+		editLinks: true,
         nav: [
             {
                 text: '首页', link: '/'
