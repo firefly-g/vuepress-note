@@ -6,6 +6,8 @@ set -e
 # 生成静态文件
 npm run docs:build
 
+cp README.md docs/.vuepress/dist/
+
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
@@ -14,6 +16,7 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:firefly-g/vuepress-note.git master:main
+git remote add origin https://github.com/firefly-g/vuepress-note
+git push origin main -f
 
 cd -

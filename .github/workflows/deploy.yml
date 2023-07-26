@@ -35,6 +35,7 @@ jobs:
       - name: Build
         run: |
           npm run build
+          cp README.md docs/.vuepress/dist/
           cd docs/.vuepress/dist
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
